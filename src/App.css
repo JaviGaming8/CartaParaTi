@@ -22,7 +22,6 @@
   padding: 0;
 }
 
-
   /* Carta */
   .contenedor-carta {
     position: relative;
@@ -83,7 +82,6 @@
     background-color: rgba(75, 46, 46, 0.6);
   }
 
-
   .boton-extra-audio {
     position: absolute;
     bottom: 60px; /* Puedes ajustar más abajo si lo deseas */
@@ -107,3 +105,25 @@
     background-color: #A0522D;
   }
 
+.inicio-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.boton-inicio {
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  background-color: #ff69b4;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
