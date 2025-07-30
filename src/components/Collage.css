@@ -1,0 +1,90 @@
+.collage {
+  position: absolute;
+  width: 340px;
+  border-radius: 20px;
+  box-shadow: 0 6px 10px rgba(0,0,0,0.3);
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  z-index: 1;
+}
+
+.collage:hover {
+  transform: scale(1.05);
+}
+
+/* Posiciones */
+.collage-superior {
+  top: 20px;
+  left: 20px;
+}
+
+.collage-medio {
+  top: 190px;
+  left: 400px;
+}
+
+.collage-inferior {
+  bottom: 50px;
+  left: 20px;
+}
+
+/* Modal contenedor invisible inicialmente */
+.modal-imagen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  cursor: default;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+}
+
+/* Cuando está activa */
+.modal-imagen.activa {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Imagen ampliada */
+.imagen-grande {
+  max-width: 80%;
+  max-height: 80%;
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(255,255,255,0.5);
+  display: block;
+}
+
+.imagen-grande-container {
+  position: relative;
+  display: inline-block;
+}
+
+.btn-cerrar {
+  position: absolute;
+  top: 75px;
+  right: 480px;
+  background: transparent;
+  border: none;
+  font-size: 2.5rem;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  z-index: 1010; /* sobre el modal */
+  line-height: 1;
+  padding: 0;
+  user-select: none;
+  transition: color 0.3s ease;
+}
+
+.btn-cerrar:hover {
+  color: #ff6666; /* color rojo claro al pasar mouse (opcional) */
+}
+
